@@ -2,15 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
 
 /* Shared Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Work Sans', sans-serif;
 
 }
 
+.common-title {
+    color: #131313;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
 .btn-primary {
     color: #FFF;
     font-size: 1.3rem;
+    margin: 35px auto;
     padding: 20px 25px;
     border-radius: 8px;
     background-color: #FF900E;
@@ -18,12 +30,28 @@ body {
     cursor: pointer;
 }
 
+.text-gray {
+    color: #727272;
+}
+
+.team-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #131313;
+}
+
+
 
 /* Header styles */
 
 header {
     background: rgba(255, 144, 14, 0.10);
-    padding: 50px 240px;
+}
+
+.header-container {
+    max-width: 1440px;
+    margin: 0px auto;
+    padding-top: 50px;
 }
 
 /* Nav Styles Start */
@@ -33,11 +61,7 @@ nav {
     align-items: center;
 }
 
-.nav-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #131313;
-}
+
 
 nav ul {
     display: flex;
@@ -46,9 +70,13 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    margin-right: 30px;
+    margin-right: 34px;
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+nav ul li:nth-last-child(1) {
+    margin-right: 0;
 }
 
 nav ul li a {
@@ -58,108 +86,223 @@ nav ul li a {
 
 /* Banner Styles Star */
 .banner-content {
-    max-width: 800px;
+    max-width: 860px;
     text-align: center;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 
 .banner-title {
     color: #131313;
     font-size: 4rem;
     font-weight: 700;
-}
-
-.banner-description {
-    color: #727272;
+    margin-bottom: 35px;
 }
 
 header img {
     margin-top: 20px;
+    padding-bottom: 50px;
     width: 100%;
 }
 
+/* Header related styles end here*/
 
-/* Media Query Mobile devices Start */
+/* Features related styles start */
 
-@media screen and (max-width: 576px) {
-    header {
-        padding: 20px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
+main {
+    max-width: 1440px;
+    margin: 70px auto;
 }
 
-/* Media Query Tablet devices */
-
-@media screen and (min-width: 576px) and (max-width: 960px) {
-    header {
-        padding: 50px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-}
-/* features related styles start */
-main, footer {
-    padding: 50px 240px;
-}
-.features {    
+.features {
+    padding: 40px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    height: auto;
 }
+
 .features-images {
-    padding: 20px 60px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;    
+    gap: 1.5rem;
 }
+
+.features-content {
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
 .features-title {
     font-size: 2.9rem;
     font-weight: 700;
     color: #131313;
 }
-.quick-list {
-    color: #727272;
-}
+
 .our-features {
     color: #FF900E;
 }
-/* Media Query Mobile devices Start */
+
+/* Features Related Styles End here */
+
+/* Experiences Related Styles Start here */
+
+.experience {
+    height: auto;
+    margin-top: 60px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.cart-title {
+    border-left: 10px solid #FF900E;
+    padding: 30px 100px;
+
+}
+
+.experience-cart-container {
+   /*  border: 2px solid blue; */
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+
+.cart-box {
+    padding: 20px 60px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    /* border: 2px solid purple; */
+}
+
+.box-title {
+    color: #131313;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.experience-img-container img {
+    
+    width: 100%;
+    padding: 0 30px;
+}
+
+.experiences-cart {
+    
+    position: relative;
+    bottom: 50px;
+    left: 0;
+    width: 200px;
+    height: 50px;
+    padding: 50px;
+    border-radius: 8px;
+    background: #FF900E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.facts {
+    border: 2px solid red;
+    padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query  Mobile devices Start */
 
 @media screen and (max-width: 576px) {
-    main {
-        padding: 10px 50px;
-        text-align: center;
-    }
-    .features {    
-        flex-direction: column-reverse;
-    }
-    .features-images {
-        padding: 10px 20px;
-        grid-template-columns: repeat(1, 1fr); 
+    header {
+        padding: 10px;
     }
 
+    nav{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .banner-content {
+        margin: 10px auto;
+    }
+
+    header img {
+        margin-top: 0;
+    }
+
+    .features {
+        flex-direction: column-reverse;
+    }
+
+    .features-images {
+        padding: 10px 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .features-content {
+        text-align: center;
+    }
+    .experience {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .experience-cart-container {
+        width: 100%;
+    }
+    
 }
 
 /* Media Query Tablet devices */
 
 @media screen and (min-width: 576px) and (max-width: 960px) {
-    main {
-        padding: 20px 80px;
-        text-align: center;
-    }
-    .features {    
-        flex-direction: column-reverse;
-    }
-    .features-images {
-        padding: 20px 40px;
-        grid-template-columns: repeat(1, 1fr); 
+    header {
+        padding: 10px;
     }
 
+    nav{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .banner-content {
+        margin: 10px auto;
+    }
+
+    header img {
+        margin-top: 0;
+    }
+
+    .features {
+        flex-direction: column-reverse;
+    }
+
+    .features-images {
+        padding: 10px 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-content {
+        text-align: center;
+    }
+    .experience {
+
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .experience-cart-container {
+        width: 100%;
+    }
+    
 }
